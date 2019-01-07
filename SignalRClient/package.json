@@ -1,0 +1,25 @@
+{
+  "name": "signalr-electron-client",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node_modules\\electron\\dist\\electron.exe ./specs/TestRunner/main.js"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "signalr",
+    "electron",
+    "client",
+    "test"
+  ],
+  "author": "Anas Aref",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^3.0.7"
+  },
+  "dependencies": {
+    "@aspnet/signalr": "^1.1.0"
+  }
+}

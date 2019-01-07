@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>SignalR Client</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+</head>
+
+<body class="body">
+  <!-- All of the Node.js APIs are available in this renderer process. -->
+  <div class="container">
+    <div class="form-horizontal row col-md-12">
+      <div class="form-group col-md-10">
+        <label class="control-label">Hub URL</label>
+        <input type="url" class="form-control" value="https://localhost:44376/notifications" id="serverInput"
+          placeholder="enter your SignalR Hub URL" />
+      </div>
+      <div class="col-md-2 align-self-center">
+        <button type="submit" class="btn btn-primary" id="connectBTN">Connect</button>
+      </div>
+      <div class="form-horizontal row col-md-12" id="sendContainer">
+        <div class="col-md-5 form-group">
+          <input type="text" class="form-control" placeholder="Method Name" id="sendMethod" />
+        </div>
+        <div class="col-md-5 form-group">
+          <input type="text" class="form-control" placeholder="Method Data" id="sendData" />
+        </div>
+        <div class="col-md-2 form-group">
+          <button type="button" class="btn btn-primary" id="sendBTN">Send</button>
+        </div>
+      </div>
+      <div class="form-horizontal row col-md-12" id="listenContainer">
+        <div class="col-md-10 form-group">
+          <input type="text" class="form-control" placeholder="Method Name" id="listenMethod" />
+        </div>
+        <div class="col-md-2 form-group">
+          <button type="button" class="btn btn-primary" id="listenBTN">Listen</button>
+        </div>
+      </div>
+    </div>
+    <div class="log form-group col-md-12">
+      <label class="control-label" for="logsTA">Logs</label>
+      <textarea class="form-control" id="logsTA" rows="5"></textarea>
+    </div>
+  </div>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</body>
+
+</html>
